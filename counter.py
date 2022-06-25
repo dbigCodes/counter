@@ -23,7 +23,7 @@ def main():
 	lastTime = datetime.datetime.now()
 
 	# allow the camera to warmup, then initialize the average frame
-	print "[INFO] warming up..."
+	print ("[INFO] warming up...")
 	time.sleep(conf["camera_warmup_time"])
 	buff = 0
 	avg = None
@@ -42,7 +42,7 @@ def main():
 
 			#initialize avg
 			if avg is None:
-				print "[INFO] starting background model..."
+				print ("[INFO] starting background model...")
 				avg = gray.copy().astype("float")
 				continue
 
@@ -86,7 +86,7 @@ def main():
 	
 		key = cv2.waitKey(30) & 0xff
 		if key == 27:
-			logging.info('The total of people entered is ' + `people_entered` + ' on ' + datetime.datetime.now().strftime("%A %d %B %Y"))
+			logging.info('The total of people entered is ' + people_entered + ' on ' + datetime.datetime.now().strftime("%A %d %B %Y"))
 			break
 	return 0
 

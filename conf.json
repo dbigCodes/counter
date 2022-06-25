@@ -1,0 +1,7 @@
+{
+	"min_seconds": 0.25,
+	"min_people_entered": 1,
+	"camera_warmup_time": 2.5,
+	"threshold": 5,
+	"min_area": 5000
+}
